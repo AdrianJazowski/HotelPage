@@ -1,14 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
-// import './index.css';
+import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import { BrowserRouter as Router } from "react-router-dom";
+// import { RoomProvider } from "./context";
+import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
-  <Router>
+  <BrowserRouter>
     <App />
-  </Router>,
+  </BrowserRouter>,
   document.getElementById("root")
 );
 
