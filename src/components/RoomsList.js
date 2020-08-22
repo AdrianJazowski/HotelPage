@@ -1,9 +1,8 @@
 import React from "react";
 import Room from "./Room";
-import RoomsContainer from "./RoomsContainer";
 
 export default function RoomList({ rooms }) {
-  if (rooms.lenght === 0) {
+  if (rooms.length === 0) {
     return (
       <div className="empty-search">
         <h3>unfortunetely no rooms matched your search parameteres</h3>
