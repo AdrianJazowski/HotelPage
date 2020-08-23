@@ -6,7 +6,8 @@ import Title from "../components/Title";
 const getUnique = (items, value) => {
   return [...new Set(items.map((item) => item[value]))];
 };
-export default function RoomsFilter({ rooms }) {
+const RoomsFilter = ({ rooms }) => {
+  // react hooks
   const context = useContext(RoomContext);
   const {
     handleChange,
@@ -42,34 +43,36 @@ export default function RoomsFilter({ rooms }) {
   return (
     <section className="filter-container">
       <Title title="search rooms" />
-      {/* roomsFilter */}
       <form className="filter-form">
+        {/* select type */}
         <div className="form-group">
           <label htmlFor="type">room type</label>
           <select
             name="type"
-            id=""
-            type={type}
-            className="form-control"
+            id="type"
             onChange={handleChange}
+            className="form-control"
+            value={type}
           >
             {types}
           </select>
         </div>
-        {/* guests */}
+        {/* end of select type */}
+        {/* guests  */}
         <div className="form-group">
           <label htmlFor="capacity">Guests</label>
           <select
             name="capacity"
             id="capacity"
-            type={capacity}
-            className="form-control"
             onChange={handleChange}
+            className="form-control"
+            value={capacity}
           >
             {people}
           </select>
         </div>
-        {/* room price  */}
+        {/* end of guests */}
+        {/* room price */}
         <div className="form-group">
           <label htmlFor="price">room price ${price}</label>
           <input
@@ -83,14 +86,14 @@ export default function RoomsFilter({ rooms }) {
             className="form-control"
           />
         </div>
+        {/* end of room price*/}
         {/* size */}
-        <div className="frorm-group">
-          <label htmlFor="size">room size</label>
+        <div className="form-group">
+          <label htmlFor="price">room size </label>
           <div className="size-inputs">
             <input
               type="number"
               name="minSize"
-              id="size"
               value={minSize}
               onChange={handleChange}
               className="size-input"
@@ -98,15 +101,15 @@ export default function RoomsFilter({ rooms }) {
             <input
               type="number"
               name="maxSize"
-              id="size"
               value={maxSize}
               onChange={handleChange}
               className="size-input"
             />
           </div>
         </div>
+        {/* end of select type */}
         {/* extras */}
-        <div className="frorm-group">
+        <div className="form-group">
           <div className="single-extra">
             <input
               type="checkbox"
@@ -115,20 +118,22 @@ export default function RoomsFilter({ rooms }) {
               checked={breakfast}
               onChange={handleChange}
             />
-            <label htmlFor="breakfast">Breakfast</label>
+            <label htmlFor="breakfast">breakfast</label>
           </div>
           <div className="single-extra">
             <input
               type="checkbox"
               name="pets"
-              id="pets"
               checked={pets}
               onChange={handleChange}
             />
-            <label htmlFor="pets">Pets</label>
+            <label htmlFor="breakfast">pets</label>
           </div>
         </div>
+        {/* end of extras type */}
       </form>
     </section>
   );
-}
+};
+
+export default RoomsFilter;
