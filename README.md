@@ -43,4 +43,4 @@ Last you need to run the project by command:
 
 Brwoser will automatically open on eg. localhost:3000
 
-The project was created as part of learning based on the tutorial: https: //www.youtube.com/watch? v = ScDWrogElmo & ab_channel = CodingAddict
+The project was created as part of learning based on the tutorial: https://www.youtube.com/watch?v=ScDWrogElmo&ab_channel=CodingAddict
